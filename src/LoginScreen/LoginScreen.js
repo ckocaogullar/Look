@@ -133,7 +133,7 @@ var styles = {
     marginTop: 30,
     marginRight:15,
     marginLeft:15,
-    backgroundColor:'rgb(35,45,55)'
+    backgroundColor:'rgb(58,84,165)'
   },
   viewStyle: {
     flex: 1,
