@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 import {Scene, Router} from 'react-native-router-flux';
 import LoginScreen from './src/LoginScreen/LoginScreen';
-
+import SplashScreen from './src/SplashScreen/SplashScreen';
 
 
 export default class Look extends Component {
@@ -21,7 +21,8 @@ export default class Look extends Component {
     return <Router>
     <Scene key="root">
             <Scene key="LoginScreen" component={LoginScreen} title="Login Screen" hideNavBar={true} initial={true}/>
-          </Scene>
+            <Scene key="SplashScreen" component={SplashScreen} title="Splash Screen" hideNavBar={true} initial={true}/>
+        </Scene>
     </Router>
   }
 }
