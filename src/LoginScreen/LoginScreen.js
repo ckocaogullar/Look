@@ -68,7 +68,7 @@ _ifSuccessLogin(){
   }else if(this.state.statusCode==406){
     this.setState({textUser: ""});
     this.setState({textPassword: ""});
-    Alert.alert('Kullanıcı adı veya şifre yanlış')
+    Alert.alert('Username or password is incorrect')
   }
 }
 
@@ -93,7 +93,7 @@ return (
           <View style={{paddingRight:15}}>
               <Item>
                   <Input
-                  placeholder = "Kullanıcı Adı"
+                  placeholder = "Username"
                   onChangeText={text => temp._onNameInput(text)}
                   autoCapitalize={'none'}
                   autoCorrect={false}
@@ -102,7 +102,7 @@ return (
               </Item>
               <Item>
                   <Input
-                  placeholder = "Şifre"
+                  placeholder = "Password"
                   onChangeText={text => temp._onPassInput(text)}
                   autoCapitalize={'none'}
                   autoCorrect={false}
