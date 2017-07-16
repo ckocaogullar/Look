@@ -12,6 +12,7 @@ import {
   Dimensions,
 } from 'react-native';
 import { Router, Scene, Actions } from 'react-native-router-flux';
+import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
 const window = Dimensions.get('window');
 
 class LoginScreen extends Component {
@@ -75,6 +76,7 @@ _ifSuccessLogin(){
   _onPressButton() {
     var temp = this;
   this.setState({showIndicator:true});
+  Actions.LookDetailScreen();
 
 }
 
@@ -113,7 +115,7 @@ return (
       </View>
 
               <Button block style={styles.button} onPress={() => this._onPressButton()}>
-                    <Text style={styles.buttonText}>GİRİŞ YAP</Text>
+                    <Text style={styles.buttonText}>Login</Text>
               </Button>
 
           </Form>
