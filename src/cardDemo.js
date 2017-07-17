@@ -45,6 +45,15 @@ class ProjectCards extends Component {
                     </View>
                 </TouchableHighlight>
                 </Body>
+
+
+                <FlatList
+                    horizontal
+                    SeparatorComponent= {() => <View style={{width:5}}/>}
+                    renderItem= {({item}) => this._renderItem(item)}
+                    data={suggestions}
+                />
+
             </Left>
         );
     }

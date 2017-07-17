@@ -13,6 +13,9 @@ import {
 } from 'react-native';
 import { Router, Scene, Actions } from 'react-native-router-flux';
 import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
+
+import HorizontalList from '../Components/HorizontalList'
+
 const window = Dimensions.get('window');
 
 class LoginScreen extends Component {
@@ -76,7 +79,7 @@ _ifSuccessLogin(){
   _onPressButton() {
     var temp = this;
   this.setState({showIndicator:true});
-  Actions.LookDetailScreen();
+  Actions.HorizontalList();
 
 }
 
@@ -119,9 +122,6 @@ return (
               </Button>
 
           </Form>
-          <View style={styles.infoText}>
-          <Text style={{textAlign: 'center'}}>Look uygulamasına hoş geldiniz!</Text>
-          </View>
             </View>
   </Container>
 );
