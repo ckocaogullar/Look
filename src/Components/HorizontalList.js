@@ -4,7 +4,6 @@ import {
     View,
     StyleSheet,
     Image,
-
     FlatList
 
 } from 'react-native'
@@ -13,18 +12,21 @@ import {
 const suggestions = [
     {
         key:1,
+        name: 'res 1',
         image: 'https://www.looktheapp.com/api/dress_1.png'
     },
     {
         key:2,
+        name: 'res 2',
         image: 'https://www.looktheapp.com/api/dress_2.png'
     },
     {
         key:3,
+        name: 'res 3',
         image: 'https://www.looktheapp.com/api/dress_3.png'
     },
 
-]
+];
 
 
 
@@ -33,8 +35,9 @@ class HorizontalList extends Component {
     _renderItem(item)
     {
         return (
-
-                <Image style={{width:50}} source={{uri: item.image}}/>
+            <View>
+                <Image style={{width:100, height: 100, marginLeft:5}} source={{uri:item.image}}/>
+            </View>
 
         );
 
@@ -43,7 +46,7 @@ class HorizontalList extends Component {
     render() {
         return (
 
-            <View>
+            <View style={{flex:1}}>
 
             <FlatList
                 horizontal

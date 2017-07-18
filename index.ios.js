@@ -23,7 +23,7 @@ export default class Look extends Component {
     <Scene key="root">
             <Scene key="SplashScreen" component={SplashScreen} title="Splash Screen" hideNavBar={true} initial={true}/>
             <Scene key="LoginScreen" component={LoginScreen} title="Login Screen" hideNavBar={true} />
-            <Scene key="HorizontalList" component={HorizontalList} title="HorizontalList " hideNavBar={true} />
+            <Scene key="LookDetailScreen" component={LookDetailScreen} title="LookDetailScreen " hideNavBar={true} />
 
             
         </Scene>

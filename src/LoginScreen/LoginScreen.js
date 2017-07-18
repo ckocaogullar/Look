@@ -79,7 +79,7 @@ _ifSuccessLogin(){
   _onPressButton() {
     var temp = this;
   this.setState({showIndicator:true});
-  Actions.HorizontalList();
+  Actions.LookDetailScreen();
 
 }
 

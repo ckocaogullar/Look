@@ -7,6 +7,8 @@ import {
     StyleSheet,
     Text,
     FlatList,
+    ScrollView,
+    Button,
     Image
 
 } from 'react-native';
@@ -15,12 +17,17 @@ import HorizontalList from '../Components/HorizontalList'
 
 
 class LookDetailScreen extends Component{
+
+    _onPress(){
+
+    }
+
     render() {
         return (
-
+        <ScrollView >
         <View style={styles.card}>
             <Image
-                style={{flex:1}}
+                style={{flex:1, height:400}}
                 source={{uri:'https://www.looktheapp.com/api/dress_6.png'
 
                 }}/>
@@ -33,8 +40,20 @@ class LookDetailScreen extends Component{
                 </Text>
             </View>
 
-        </View>
 
+        </View>
+            <View>
+            <HorizontalList style={{marginBottom:10}}/>
+            </View>
+            <View>
+                <Button title="Suggest_piece" onPress={() => this._onPress()}>
+                    <Text>
+                        Suggest a Piece
+                    </Text>
+                </Button>
+            </View>
+
+        </ScrollView>
 
 
         );
@@ -55,10 +74,16 @@ const styles = StyleSheet.create(
             flex: 1,
             overflow: 'hidden',
             margin: 10,
-            marginBottom:100,
+            marginBottom:10,
             marginTop: 50,
             borderWidth:1,
             borderColor: 'lightgrey'
+
+
+        },
+        myButton: {
+            backgroundColor: 'darkblue',
+            flex:1
 
 
         },

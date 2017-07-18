@@ -1,18 +1,34 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
+import {
+    Text,
+    Image,
+    StyleSheet
+} from 'react-native';
 
-class LookFeedDisplay extends Component{
 
-    render(){
-      var temp = this;
-      <div>
-      <h1>
-        Merhaba alamet
-      </h1>
-      </div>
+class LookFeedDisplay extends Component {
+
+
+    constructor(props){
+        super(props);
+
+    }
+
+    render() {
+        return (
+            <View>
+
+
+            </View>
+
+
+        )
+
     }
 
 
 
 }
 
-module.exports= LookFeedDisplay;
+
+module.exports= LookFeedDisplay
