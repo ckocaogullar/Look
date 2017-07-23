@@ -25,6 +25,11 @@ const suggestions = [
         name: 'res 3',
         image: 'https://www.looktheapp.com/api/dress_3.png'
     },
+    {
+        key:4,
+        name: 'res 4',
+        image: 'https://www.looktheapp.com/api/dress_4.png'
+    },
 
 ];
 

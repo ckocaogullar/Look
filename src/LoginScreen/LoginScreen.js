@@ -12,7 +12,7 @@ import {
   Dimensions,
 } from 'react-native';
 import { Router, Scene, Actions } from 'react-native-router-flux';
-import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
+import NewsfeedScreen from '../NewsfeedScreen/NewsfeedScreen'
 
 import HorizontalList from '../Components/HorizontalList'
 
@@ -79,7 +79,7 @@ _ifSuccessLogin(){
   _onPressButton() {
     var temp = this;
   this.setState({showIndicator:true});
-  Actions.LookDetailScreen();
+  Actions.NewsfeedScreen();
 
 }
 

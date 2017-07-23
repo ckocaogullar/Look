@@ -46,7 +46,7 @@ class LookDetailScreen extends Component{
             <HorizontalList style={{marginBottom:10}}/>
             </View>
             <View>
-                <Button title="Suggest_piece" onPress={() => this._onPress()}>
+                <Button style={styles.myButton} title="Suggest a Piece" onPress={() => this._onPress()}>
                     <Text>
                         Suggest a Piece
                     </Text>
@@ -82,6 +82,8 @@ const styles = StyleSheet.create(
 
         },
         myButton: {
+            borderWidth:3,
+            borderColor:'black',
             backgroundColor: 'darkblue',
             flex:1
 
