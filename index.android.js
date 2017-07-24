@@ -11,25 +11,27 @@ import {
   Text,
   View
 } from 'react-native';
+import {Scene, Router} from 'react-native-router-flux';
+import LoginScreen from './src/LoginScreen/LoginScreen';
+import SplashScreen from './src/SplashScreen/SplashScreen';
+import LookDetailScreen from './src/LookDetailScreen/LookDetailScreen'
+import NewsfeedScreen from './src/NewsfeedScreen/NewsfeedScreen'
 
 export default class Look extends Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
-      </View>
-    );
+    return <Router>
+    <Scene key="root">
+            <Scene key="SplashScreen" component={SplashScreen} title="Splash Screen" hideNavBar={true} initial={true}/>
+            <Scene key="LoginScreen" component={LoginScreen} title="Login Screen" hideNavBar={true} />
+            <Scene key="NewsfeedScreen" component={NewsfeedScreen} title="Newsfeed Screen " hideNavBar={true} />
+            <Scene key="LookDetailScreen" component={LookDetailScreen} title="LookDetail Screen " hideNavBar={true} />
+        </Scene>
+    </Router>
   }
 }
+
+
+AppRegistry.registerComponent('Look', () => Look);
 
 const styles = StyleSheet.create({
   container: {
