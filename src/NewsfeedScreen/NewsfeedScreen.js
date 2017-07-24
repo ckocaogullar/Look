@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {View, Text, FlatList, Image} from 'react-native';
-import {List, ListItem} from 'react-native';
+import {View, Text, FlatList, Image, Button} from 'react-native';
 
+import { Router, Scene, Actions } from 'react-native-router-flux';
+import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
 
 const images = [
     {
@@ -24,6 +25,11 @@ const images = [
         name: 'res 4',
         image: 'https://www.looktheapp.com/api/dress_4.png'
     },
+    {
+        key:5,
+        name: 'res 5',
+        image: 'https://www.looktheapp.com/api/dress_5.png'
+    },
 
 ];
 
@@ -33,10 +39,12 @@ const images = [
 
 class NewsfeedScreen extends Component {
 
+
   _renderItem(item){
     return (
         <View>
-          <Image style={{flex:1, height:50, marginBottom:5}} source={{uri:item.image}}/>
+
+            <Image source={{uri:item.image}} style={{flex:1, height:150}}></Image>
         </View>
 
     );
