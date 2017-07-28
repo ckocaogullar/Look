@@ -1,5 +1,14 @@
 import React, { Component } from 'react';
-import {View, Text, FlatList, Image, Button} from 'react-native';
+import {View, Text, FlatList, Image, Button, TouchableHighlight} from 'react-native';
+import {
+    AppRegistry,
+    StyleSheet,
+    Alert,
+    AsyncStorage,
+    Platform,
+    ActivityIndicator,
+    Dimensions,
+} from 'react-native';
 
 import { Router, Scene, Actions } from 'react-native-router-flux';
 import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
@@ -44,7 +53,11 @@ class NewsfeedScreen extends Component {
     return (
         <View>
 
-            <Image source={{uri:item.image}} style={{flex:1, height:150}}></Image>
+            <TouchableHighlight onPress={() => this._onPressButton()}>
+                <Image source={{uri:item.image}} style={{flex:1, height:150}}></Image>
+            </TouchableHighlight>
+
+
         </View>
 
     );
@@ -53,8 +66,12 @@ class NewsfeedScreen extends Component {
 
   }
 
+    _onPressButton() {
+        var temp = this;
+        this.setState({showIndicator:true});
+        Actions.LoginScreen();
 
-
+    }
 
     render() {
       return (
