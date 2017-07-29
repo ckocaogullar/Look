@@ -35,9 +35,8 @@ class LookDetailScreen extends Component{
         <View style={styles.card}>
             <Image
                 style={{flex:1, height:400}}
-                source={{uri:this.state.uri
-
-                }}/>
+                source={{uri:this.state.uri}}
+            />
             <View style={{margin:20}}>
                 <Text style={{fontSize:20}}>
                     Evening Look

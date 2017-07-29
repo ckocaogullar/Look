@@ -6,9 +6,12 @@ import {
     FlatList,
     Button,
     Image,
-    TouchableHighlight
+    TouchableHighlight,
+    Navigator
 
 } from 'react-native';
+
+
 
 import { Actions } from 'react-native-router-flux';
 import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
@@ -19,14 +22,21 @@ class NewsFeedItem extends Component{
     constructor(props){
         super(props);
         this.state = {
-            Uri : props.imageUri,
-            key : ""
+            Uri : props.Uri
         }
 
     }
 
-    _onPressButton() {
-        Actions.LookDetailScreen(this.state.imageUri);
+
+    _Navigate() {
+        this.props.navigator.push(
+            {
+                component: LookDetailScreen,
+                passProps: {Uri: this.state.Uri}
+
+            }
+        )
+
 
     }
 
@@ -36,7 +46,7 @@ class NewsFeedItem extends Component{
 
                 <View>
 
-                    <TouchableHighlight onPress={() => this._onPressButton()}>
+                    <TouchableHighlight onPress={() => this._Navigate('Look detail')}>
                         <Image source={{uri:this.state.Uri}} style={{flex:1, height:150}}></Image>
                     </TouchableHighlight>
 

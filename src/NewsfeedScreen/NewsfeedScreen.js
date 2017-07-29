@@ -52,7 +52,8 @@ class NewsfeedScreen extends Component {
   _renderItem(item){
     return (
 
-            <NewsFeedItem imageUri={{uri:item.image}} key={item.key}/>
+            <NewsFeedItem Uri={item.image} />
+
 
 
     );
