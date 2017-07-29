@@ -17,6 +17,13 @@ import HorizontalList from '../Components/HorizontalList'
 
 
 class LookDetailScreen extends Component{
+    uri="";
+
+    constructor(props, uri){
+        super(props);
+        this.uri=uri;
+
+    }
 
     _onPress(){
 
@@ -28,7 +35,7 @@ class LookDetailScreen extends Component{
         <View style={styles.card}>
             <Image
                 style={{flex:1, height:400}}
-                source={{uri:'https://www.looktheapp.com/api/dress_6.png'
+                source={{uri:this.state.uri
 
                 }}/>
             <View style={{margin:20}}>
@@ -90,7 +97,7 @@ const styles = StyleSheet.create(
 
         },
     }
-)
+);
 
 module.exports = LookDetailScreen;
 

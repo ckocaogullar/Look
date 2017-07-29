@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import { Router, Scene, Actions } from 'react-native-router-flux';
-import LookDetailScreen from '../LookDetailScreen/LookDetailScreen'
+import NewsFeedItem from '../NewsfeedScreen/NewsFeedItem'
 
 const images = [
     {
@@ -51,27 +51,12 @@ class NewsfeedScreen extends Component {
 
   _renderItem(item){
     return (
-        <View>
 
-            <TouchableHighlight onPress={() => this._onPressButton()}>
-                <Image source={{uri:item.image}} style={{flex:1, height:150}}></Image>
-            </TouchableHighlight>
+            <NewsFeedItem imageUri={{uri:item.image}} key={item.key}/>
 
-
-        </View>
 
     );
-
-
-
   }
-
-    _onPressButton() {
-        var temp = this;
-        this.setState({showIndicator:true});
-        Actions.LoginScreen();
-
-    }
 
     render() {
       return (
