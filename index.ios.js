@@ -16,14 +16,15 @@ import LoginScreen from './src/LoginScreen/LoginScreen';
 import SplashScreen from './src/SplashScreen/SplashScreen';
 import LookDetailScreen from './src/LookDetailScreen/LookDetailScreen'
 import NewsfeedScreen from './src/NewsfeedScreen/NewsfeedScreen'
+import ProfileScreen from './src/ProfileScreen/ProfileScreen'
 
 export default class Look extends Component {
   render() {
     return <Router>
     <Scene key="root">
-            <Scene key="SplashScreen" component={SplashScreen} title="Splash Screen" hideNavBar={true} initial={true}/>
-            <Scene key="LoginScreen" component={LoginScreen} title="Login Screen" hideNavBar={true} />
-            <Scene key="NewsfeedScreen" component={NewsfeedScreen} title="Newsfeed Screen " hideNavBar={true} />
+
+            <Scene key="ProfileScreen" component={ProfileScreen} title="Profile Screen " hideNavBar={true} initial={true} />
+
 
         </Scene>
     </Router>
