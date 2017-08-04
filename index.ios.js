@@ -23,7 +23,7 @@ export default class Look extends Component {
     return <Router>
     <Scene key="root">
 
-            <Scene key="ProfileScreen" component={ProfileScreen} title="Splash Screen " hideNavBar={true} initial={true} />
+            <Scene key="SplashScreen" component={SplashScreen} title="Splash Screen " hideNavBar={true} initial={true} />
             <Scene key="LoginScreen" component={LoginScreen} title="Login Screen " hideNavBar={true} />
             <Scene key="NewsfeedScreen" component={NewsfeedScreen} title="NewsFeed Screen " hideNavBar={true} />
 
