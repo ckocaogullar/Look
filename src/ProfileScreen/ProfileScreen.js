@@ -27,6 +27,8 @@ import {
      } from 'native-base';
 
 // list of images
+
+// TODO: BAĞLANTILAR EKSİK HALA, FOOTER YOK HEADER DA ICONLAR EKSIK
 const data = [
     {
         data: {
