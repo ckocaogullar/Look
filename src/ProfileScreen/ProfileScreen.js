@@ -9,6 +9,7 @@ import {
     Image,
     Slider
 } from 'react-native';
+import { Thumbnail, Header, Body } from 'native-base'
 import Masonry from 'react-native-masonry';
 
 // list of images
@@ -21,23 +22,7 @@ const data = [
             },
         },
         uri: 'https://s-media-cache-ak0.pinimg.com/736x/32/7f/d9/327fd98ae0146623ca8954884029297b.jpg',
-        renderFooter: (data) => {
-            return (
-                <View key='brick-header' style={{backgroundColor: 'white', padding: 5, paddingRight: 9, paddingLeft: 9}}>
-                    <Text style={{lineHeight: 20, fontSize: 14}}>{data.caption}</Text>
-                </View>
-            )
-        },
-        renderHeader: (data) => {
-            return (
-                <View key='brick-footer' style={styles.headerTop}>
-                    <Image
-                        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsO3JMW5pmK-pq9g3T-1znMMK8IEELKnasQ6agJANePV7Z0nwp9w' }}
-                        style={styles.userPic}/>
-                    <Text style={styles.userName}>{data.user.name}</Text>
-                </View>
-            )
-        }
+
     },
     {
         uri: 'https://s-media-cache-ak0.pinimg.com/736x/b1/21/df/b121df29b41b771d6610dba71834e512.jpg'
@@ -113,6 +98,18 @@ class ProfileScreen extends Component {
     render() {
         return (
             <ScrollView style={{backgroundColor: '#f4f4f4'}}>
+                <View>
+                    <Header>
+                        <Thumbnail circle small source={{uri:"https://www.looktheapp.com/api/dress_1.png"}} />
+                        <Body>
+                        <Text> Profile name </Text>
+                        </Body>
+                    </Header>
+                    <Text>Follower count</Text>
+
+
+                </View>
+
 
                 <View style={{height: '100%', padding: this.state.padding}}>
                     <Masonry
