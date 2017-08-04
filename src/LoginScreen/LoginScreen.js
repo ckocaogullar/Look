@@ -14,10 +14,6 @@ import {
 import { Router, Scene, Actions } from 'react-native-router-flux';
 import NewsfeedScreen from '../NewsfeedScreen/NewsfeedScreen'
 
-import HorizontalList from '../Components/HorizontalList'
-
-import ProfileScreen from '../ProfileScreen/ProfileScreen'
-
 const window = Dimensions.get('window');
 
 class LoginScreen extends Component {
@@ -81,7 +77,7 @@ _ifSuccessLogin(){
   _onPressButton() {
     var temp = this;
   this.setState({showIndicator:true});
-  Actions.ProfileScreen();
+  Actions.NewsfeedScreen();
 
 }
 
