@@ -12,8 +12,9 @@ import {
   Dimensions,
 } from 'react-native';
 import { Router, Scene, Actions } from 'react-native-router-flux';
-import NewsfeedScreen from '../NewsfeedScreen/NewsfeedScreen'
-import ProfileScreen from '../ProfileScreen/ProfileScreen'
+import NewsfeedScreen from '../NewsfeedScreen/NewsfeedScreen';
+import ProfileScreen from '../ProfileScreen/ProfileScreen';
+import Tabs from '../Tabs/Tabs';
 const window = Dimensions.get('window');
 
 class LoginScreen extends Component {
@@ -36,8 +37,6 @@ componentWillMount(){
           storagePass = result2;
           if(storageName == null && storagePass == null){
           }else {
-            Actions.Tabs();
-
           }
       });
   });
@@ -77,7 +76,7 @@ _ifSuccessLogin(){
   _onPressButton() {
     var temp = this;
   this.setState({showIndicator:true});
-  Actions.ProfileScreen();
+  Actions.Tabs();
 
 }
 

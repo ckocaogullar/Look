@@ -8,30 +8,40 @@ import {
     Text,
     FlatList,
     ScrollView,
-    Button,
-    Image
-
+    Image,
+    Platform
 } from 'react-native';
+import { Header, Body, Title, Button } from 'native-base';
 import { Router, Scene, Actions } from 'react-native-router-flux';
-import HorizontalList from '../Components/HorizontalList'
-
+import HorizontalList from '../Components/HorizontalList';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 class LookDetailScreen extends Component{
-    uri="";
 
     constructor(props, uri){
         super(props);
-        this.uri=uri;
+        this.state={
+          uri:props.uri,
+    };
+  }
 
-    }
-
-    _onPress(){
-
+    backButton(){
+      Actions.pop()
     }
 
     render() {
         return (
-        <ScrollView >
+        <ScrollView style={styles.pageMargin}>
+        <Header style={styles.headerStyle}>
+          <Button style={styles.topBackButtonStyle} onPress={ () => this.backButton()} iconLeft>
+              <Icon name="ios-arrow-back" style={styles.backArrowStyle}/>
+          </Button>
+            <Body>
+              <Title style={styles.titleStyle}>
+                Details
+              </Title>
+            </Body>
+          </Header>
         <View style={styles.card}>
             <Image
                 style={{flex:1, height:400}}
@@ -63,14 +73,7 @@ class LookDetailScreen extends Component{
 
 
         );
-
-
-
     }
-
-
-
-
 }
 
 const styles = StyleSheet.create(
@@ -92,14 +95,32 @@ const styles = StyleSheet.create(
             borderColor:'black',
             backgroundColor: 'darkblue',
             flex:1
-
-
+        },
+        topBackButtonStyle:{
+          width: 50,
+          paddingLeft:9,
+          backgroundColor:'transparent',
+          position: 'absolute',
+          zIndex:50,
+          left:0,
+          paddingLeft:0,
+          alignItems:'center'
+        },
+        backArrowStyle: {
+          color:'white',
+          fontSize:22,
+          marginLeft:'auto',
+          marginRight:'auto',
+        },
+        headerStyle: {
+          height:45,
+          paddingTop:0,
+          backgroundColor: 'rgb(180,0,0)'
+        },
+        pageMargin: {
+          marginTop: (Platform.OS === 'ios') ? 18 : 0,
         },
     }
 );
 
 module.exports = LookDetailScreen;
-
-
-
-

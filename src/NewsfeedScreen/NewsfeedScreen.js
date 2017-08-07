@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {View, Text, FlatList, Image, Button, TouchableHighlight} from 'react-native';
+import {List, ListItem} from 'native-base';
+import {View, Text, FlatList, Image, Button, TouchableHighlight, ListView} from 'react-native';
 import {
     AppRegistry,
     StyleSheet,
@@ -12,66 +13,29 @@ import {
 
 import { Router, Scene, Actions } from 'react-native-router-flux';
 import NewsFeedItem from '../NewsfeedScreen/NewsFeedItem'
-
-const images = [
-    {
-        key:1,
-        name: 'res 1',
-        image: 'https://www.looktheapp.com/api/dress_1.png'
-    },
-    {
-        key:2,
-        name: 'res 2',
-        image: 'https://www.looktheapp.com/api/dress_2.png'
-    },
-    {
-        key:3,
-        name: 'res 3',
-        image: 'https://www.looktheapp.com/api/dress_3.png'
-    },
-    {
-        key:4,
-        name: 'res 4',
-        image: 'https://www.looktheapp.com/api/dress_4.png'
-    },
-    {
-        key:5,
-        name: 'res 5',
-        image: 'https://www.looktheapp.com/api/dress_5.png'
-    },
-
-];
-
-
-
-
-
 class NewsfeedScreen extends Component {
 
-
-  _renderItem(item){
-    return (
-
-            <NewsFeedItem Uri={item.image} />
-
-
-
-    );
-  }
+    constructor(props) {
+      super(props);
+      const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+      this.state = {
+        listData: ds.cloneWithRows(['1', '2', '3', '4', '5']),
+      };
+    }
 
     render() {
       return (
           <View style={{flex:1}}>
-
-          <FlatList
-
-          renderItem={({item}) => this._renderItem(item)}
-          data={images}
-          />
-
+            <ListView
+                dataSource={this.state.listData}
+                renderRow={(item) =>
+                        <NewsFeedItem
+                        num={item}
+                        />
+                }
+                >
+            </ListView>
           </View>
-
-
       );
     }
 
