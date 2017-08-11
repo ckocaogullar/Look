@@ -148,8 +148,8 @@ class ProfileScreen extends Component {
                     </Content>
                     <Footer>
                             <FooterTab>
-                                <Button full>
-                                    <Text>Footer</Text>
+                                <Button block style={styles.button} onPress={() => this._onPressButton()}>
+                                    <Text style={styles.buttonText}>Footer</Text>
                                 </Button>
                             </FooterTab>
                         </Footer>

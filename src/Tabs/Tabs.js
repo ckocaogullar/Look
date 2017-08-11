@@ -43,6 +43,13 @@ class Tabs extends Component{
     )
   }
 
+    _onPressButton() {
+        var temp = this;
+        this.setState({showIndicator:true});
+        Actions.Tabs();
+
+    }
+
 };
 
 const styles = StyleSheet.create({
