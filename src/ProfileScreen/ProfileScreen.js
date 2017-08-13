@@ -146,13 +146,6 @@ class ProfileScreen extends Component {
                         </View>
                         </ScrollView>
                     </Content>
-                    <Footer>
-                            <FooterTab>
-                                <Button block style={styles.button} onPress={() => this._onPressButton()}>
-                                    <Text style={styles.buttonText}>Footer</Text>
-                                </Button>
-                            </FooterTab>
-                        </Footer>
 
                 </Container>
 

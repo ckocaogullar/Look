@@ -8,6 +8,7 @@ import TabCore from './TabCore';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import NewsfeedScreen from '../NewsfeedScreen/NewsfeedScreen'
 import ProfileScreen from '../ProfileScreen/ProfileScreen'
+import CameraScreen from '../Camera/CameraScreen'
 
 import {
   AppRegistry,
@@ -36,6 +37,10 @@ class Tabs extends Component{
         <View tabLabel="ios-list-box" tabColor style={styles.tabView}>
             <NewsfeedScreen />
         </View>
+          <View tabLabel="ios-flower" tabColor style={styles.tabView}>
+              <CameraScreen />
+          </View>
+
         <View tabLabel="ios-flower" style={styles.tabView}>
             <ProfileScreen />
         </View>
