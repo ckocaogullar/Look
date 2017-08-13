@@ -37,7 +37,7 @@ class Tabs extends Component{
         <View tabLabel="ios-list-box" tabColor style={styles.tabView}>
             <NewsfeedScreen />
         </View>
-          <View tabLabel="ios-flower" tabColor style={styles.tabView}>
+          <View tabLabel="ion-ios-plus-outline" tabColor style={styles.tabView}>
               <CameraScreen />
           </View>
 
